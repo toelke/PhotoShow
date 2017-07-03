@@ -98,7 +98,7 @@ class Infos implements HTMLObject
 			$this->dl = "?t=Zip&f=$this->path";
 		}
 
-		if(CurrentUser::$admin){
+		if(CurrentUser::$admin || CurrentUser::$uploader){
 
 		$this->deleteform = "<div id='deleteform'><form class='pure-form' action='?a=Del' method='post' onsubmit='return executeOnSubmit(`delete`);'>
 				<input type='hidden' name='del' value=\"".htmlentities($this->w, ENT_QUOTES ,'UTF-8')."\">

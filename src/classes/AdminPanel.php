@@ -60,7 +60,7 @@ class AdminPanel
 
 
 
-		if(CurrentUser::$admin){
+		if(CurrentUser::$admin || CurrentUser::$uploader){
 			echo $this->j->toHTML();
 		}
 

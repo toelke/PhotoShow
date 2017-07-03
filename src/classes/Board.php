@@ -178,7 +178,7 @@ class Board implements HTMLObject
 				 continue;
 			$firstImg = Judge::searchDir($d);
 			if(!$firstImg){
-				if(CurrentUser::$admin){
+				if(CurrentUser::$admin || CurrentUser::$uploader){
 					$firstImg = NULL;
 				}else{
 					continue;
